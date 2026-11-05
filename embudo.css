@@ -1,0 +1,40 @@
+/* Estilos compartidos de las páginas del embudo: gracias, upsell, downsell y privacidad. Marca Cocina Libre. */
+:root{--verde:#3F5B3A;--terra:#D9653B;--crema:#FBF6EE;--tinta:#25301f;--suave:#e9e1d1;--blanco:#fff;--vc:#E3EBD9}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;font-size:18px;line-height:1.6;color:var(--tinta);background:var(--crema)}
+h1,h2{font-family:'Fraunces',Georgia,serif;line-height:1.15;color:var(--verde)}
+h1{font-size:clamp(1.8rem,6vw,2.6rem);font-weight:800;margin:14px 0 12px}
+h2{font-size:1.35rem;font-weight:800;margin-bottom:10px}
+a{color:var(--verde)}
+.bar{background:var(--verde);color:var(--crema);text-align:center;padding:12px 16px;font-weight:700}
+.bar small{display:block;font-weight:400;opacity:.9}
+.wrap{max-width:720px;margin:0 auto;padding:28px 18px 60px}
+.kick{display:inline-block;background:var(--terra);color:#fff;font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;border-radius:99px;padding:6px 14px}
+.lead{font-size:1.1rem;color:#4a5441}
+.box{background:var(--blanco);border:1px solid var(--suave);border-radius:16px;padding:22px;margin:18px 0}
+.foto{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:16px;margin:20px 0;box-shadow:0 10px 26px rgba(37,48,31,.18)}
+.fotos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:18px 0}
+.fotos img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:12px}
+ul.ck{list-style:none}
+ul.ck li{padding:8px 0 8px 34px;position:relative;border-bottom:1px solid var(--suave)}
+ul.ck li:last-child{border:0}
+ul.ck li::before{content:"✓";position:absolute;left:0;top:9px;width:22px;height:22px;border-radius:50%;background:var(--vc);color:var(--verde);font-weight:800;font-size:.8rem;display:flex;align-items:center;justify-content:center}
+.steps{counter-reset:s;list-style:none}
+.steps li{counter-increment:s;padding:10px 0 10px 46px;position:relative;border-bottom:1px solid var(--suave)}
+.steps li:last-child{border:0}
+.steps li::before{content:counter(s);position:absolute;left:0;top:9px;width:32px;height:32px;border-radius:50%;background:var(--terra);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+.price{text-align:center;margin:26px 0 8px}
+.price .p{font-family:'Fraunces',serif;font-size:3.2rem;font-weight:800;color:var(--verde);line-height:1}
+.price small{display:block;color:#5b6650}
+.buy{text-align:center;margin:14px 0;min-height:60px}
+.cta{display:inline-block;background:var(--terra);color:#fff;text-decoration:none;font-weight:700;font-size:1.15rem;padding:16px 28px;border-radius:12px;box-shadow:0 4px 0 #a94b28;text-align:center}
+.cta:focus-visible,a:focus-visible{outline:3px solid var(--verde);outline-offset:3px}
+.guar{display:flex;gap:12px;align-items:center;background:var(--vc);border-radius:14px;padding:14px 16px;margin-top:22px;font-size:.95rem}
+.guar b{color:var(--verde)}
+.foot{text-align:center;color:#5b6650;font-size:.85rem;margin-top:28px}
+.nota{font-size:.88rem;color:#5b6650;margin-top:8px}
+/* privacidad */
+.legal h2{margin-top:26px}
+.legal p,.legal ul{margin-top:10px}
+.legal ul{margin-left:22px}
+.pend{background:#fff3e0;border:1px solid #f0c987;border-radius:12px;padding:12px 14px;margin:16px 0;font-size:.95rem}

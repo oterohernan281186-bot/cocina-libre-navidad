@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cocina Libre: Navidad · Menú sin gluten y sin azúcar</title>
+<meta name="description" content="Panettone y menú completo de Nochebuena sin gluten y sin azúcar, con plan de cocina, lista de compras y 4 bonos. Una sola mesa para toda tu familia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,800&display=swap" rel="stylesheet">
+<style>
+  /* Marca Cocina Libre: verde, terracota y crema. Estructura modelada de la landing que ya vende (250 recetas). */
+  :root{--verde:#3F5B3A;--terra:#D9653B;--terra2:#a94b28;--crema:#FBF6EE;--tinta:#25301f;--suave:#e9e1d1;--blanco:#fff;--vc:#E3EBD9;--rojo:#9d1f27}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'DM Sans',system-ui,sans-serif;font-size:18px;line-height:1.6;color:var(--tinta);background:var(--crema);padding-bottom:76px}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.15;color:var(--verde)}
+  h1{font-size:clamp(2rem,7vw,3.2rem);font-weight:800}
+  h2{font-size:clamp(1.6rem,5vw,2.3rem);font-weight:800;margin-bottom:.5em}
+  h3{font-size:1.2rem;font-weight:600}
+  img{max-width:100%}
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px}
+  section{padding:50px 0}
+  .alt{background:var(--blanco)}
+  .verde{background:var(--verde);color:var(--crema)}
+  .verde h2{color:var(--crema)}
+  .centro{text-align:center}
+  .sub{font-size:1.1rem;color:#4a5441;max-width:640px}
+  .centro .sub{margin:0 auto}
+  .top{background:var(--verde);color:var(--crema);text-align:center;font-weight:700;font-size:.9rem;padding:9px 16px}
+  .tag{display:inline-block;background:var(--terra);color:#fff;font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:99px;margin-bottom:16px}
+  .btn{display:inline-block;background:var(--terra);color:#fff;font-weight:700;font-size:1.15rem;text-decoration:none;padding:16px 28px;border-radius:12px;text-align:center;box-shadow:0 4px 0 var(--terra2)}
+  .btn:hover{filter:brightness(1.07)}
+  .btn:focus-visible,summary:focus-visible{outline:3px solid var(--verde);outline-offset:3px}
+  .btn small{display:block;font-weight:500;font-size:.85rem;opacity:.95}
+  .chips{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:18px;font-size:.92rem;font-weight:500;color:#3c4733}
+  .chips span{background:var(--vc);border-radius:99px;padding:5px 12px}
+  .ilus{font-size:.8rem;color:#5b6650;margin-top:10px}
+  /* hero */
+  .hero{padding:34px 0 46px}
+  .hero-grid{display:grid;gap:26px;align-items:center}
+  .hero-grid>*{min-width:0}
+  .hero p.sub{margin:16px 0 24px}
+  .hero-img,.banner-img{display:block;width:100%;height:auto;border-radius:16px;box-shadow:0 18px 40px rgba(37,48,31,.28)}
+  .banner-img{max-width:820px;margin:0 auto 26px}
+  /* dolor */
+  .dolor{list-style:none;max-width:680px;margin:0 auto}
+  .dolor li{background:var(--crema);border:1px solid var(--suave);border-radius:12px;padding:12px 16px 12px 46px;margin:10px 0;position:relative}
+  .dolor li::before{content:"✗";position:absolute;left:16px;top:12px;color:var(--terra);font-weight:800}
+  .cierre-dolor{max-width:680px;margin:20px auto 0;text-align:center;font-weight:700;color:var(--verde)}
+  /* mosaico de platos */
+  .tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:22px}
+  .tile{position:relative;border-radius:14px;overflow:hidden;background:#000}
+  .tile img{display:block;width:100%;height:100%;aspect-ratio:4/3;object-fit:cover}
+  .tile b{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;color:#fff;font-size:.95rem;line-height:1.25;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+  .tile.estrella::after{content:"La estrella";position:absolute;top:10px;left:10px;background:var(--rojo);color:#fff;font-weight:700;font-size:.75rem;padding:4px 10px;border-radius:99px}
+  /* menús */
+  .menus{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;margin-top:20px}
+  .menu{background:var(--crema);border:1px solid var(--suave);border-radius:14px;overflow:hidden}
+  .menu .foto{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+  .menu div{padding:16px 18px 20px}
+  .menu ul{margin:8px 0 0 18px;font-size:.95rem}
+  .menu .para{font-weight:700;color:var(--terra);font-size:.9rem;margin-top:10px}
+  /* stack: lo que recibes */
+  .stack{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;margin-top:26px}
+  .item{display:grid;grid-template-columns:104px minmax(0,1fr);gap:16px;align-items:center;background:var(--blanco);border:1px solid var(--suave);border-radius:16px;padding:14px;box-shadow:0 6px 18px rgba(37,48,31,.07)}
+  .item img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:10px;box-shadow:0 6px 16px rgba(37,48,31,.22)}
+  .item .et{display:inline-block;background:var(--verde);color:#fff;font-weight:700;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:99px;margin-bottom:6px}
+  .item.principal .et{background:var(--terra)}
+  .item h3{margin-bottom:4px}
+  .item p{font-size:.95rem;line-height:1.45;color:#46513d}
+  /* ¿es para ti? */
+  .sino{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin-top:20px}
+  .sino>div{background:var(--crema);border:1px solid var(--suave);border-radius:14px;padding:18px 20px}
+  .sino h3{margin-bottom:8px}
+  .si h3{color:var(--verde)}
+  .no h3{color:var(--rojo)}
+  .sino ul{list-style:none}
+  .sino li{padding:6px 0 6px 28px;position:relative}
+  .si li::before{content:"✓";position:absolute;left:0;color:var(--verde);font-weight:800}
+  .no li::before{content:"✗";position:absolute;left:0;color:var(--rojo);font-weight:800}
+  /* por dentro */
+  .adentro{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;align-items:center}
+  .foto{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:14px;box-shadow:0 10px 26px rgba(37,48,31,.2)}
+  ul.checks{list-style:none}
+  ul.checks li{padding:8px 0 8px 34px;position:relative}
+  ul.checks li::before{content:"✓";position:absolute;left:0;top:8px;width:24px;height:24px;border-radius:50%;background:var(--verde);color:#fff;font-size:.9rem;display:flex;align-items:center;justify-content:center}
+  /* países */
+  .paises{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px;text-align:left}
+  .paises .card{background:var(--blanco);border:1px solid var(--suave);border-radius:14px;padding:14px}
+  .paises b{display:block;color:var(--terra)}
+  /* precio */
+  .precio{max-width:620px;margin:0 auto;text-align:center}
+  .precio .monto{font-family:'Fraunces',serif;font-size:3.6rem;font-weight:800;color:var(--crema);line-height:1}
+  .precio .lista{list-style:none;text-align:left;margin:18px auto;display:inline-block}
+  .precio .lista li{padding:5px 0 5px 28px;position:relative}
+  .precio .lista li::before{content:"✓";position:absolute;left:0;color:#fff;font-weight:800}
+  .precio .btn{margin-top:14px}
+  .pago{font-size:.88rem;opacity:.9;margin-top:14px}
+  .garantia{display:flex;gap:16px;align-items:center;max-width:680px;margin:0 auto;background:var(--vc);border-radius:16px;padding:18px 20px}
+  .sello{flex:0 0 82px;height:82px;border-radius:50%;background:var(--terra);color:#fff;font-weight:800;font-size:.78rem;line-height:1.1;display:flex;align-items:center;justify-content:center;text-align:center;border:3px dashed #fff;outline:3px solid var(--terra)}
+  /* faq */
+  details{background:var(--crema);border:1px solid var(--suave);border-radius:12px;margin:10px 0;padding:14px 18px}
+  summary{cursor:pointer;font-weight:700;color:var(--verde)}
+  details p{margin-top:10px}
+  footer{padding:32px 0;font-size:.82rem;color:#5b6650;text-align:center}
+  footer a{color:var(--verde)}
+  .barra{position:fixed;left:0;right:0;bottom:0;background:var(--verde);padding:10px 16px;text-align:center;z-index:10;box-shadow:0 -4px 14px rgba(0,0,0,.15)}
+  .barra .btn{display:block;max-width:420px;margin:0 auto;padding:12px 20px;font-size:1.05rem}
+  @media(min-width:760px){
+    .hero-grid{grid-template-columns:1fr 1.2fr}
+    .tiles{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .menus{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .stack{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .item.principal{grid-column:1/-1;grid-template-columns:200px minmax(0,1fr)}
+    .item.principal h3{font-size:1.5rem}
+    .item.principal p{font-size:1.05rem}
+    .sino{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .adentro{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .paises{grid-template-columns:repeat(4,minmax(0,1fr))}
+    body{padding-bottom:0}
+    .barra{display:none}
+  }
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body data-viewcontent>
+
+<div class="top">📥 Descarga inmediata en PDF · Pago único · Recetario digital</div>
+
+<!-- 1. HERO -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="tag">Cocina Libre · Edición Navidad</span>
+      <h1>El panettone y la cena de Navidad que toda tu mesa puede comer: sin gluten y sin azúcar</h1>
+      <p class="sub">Un menú completo de Nochebuena y Navidad, con plan de cocina y lista de compras. Para que nadie se quede mirando el postre.</p>
+      <a class="btn" href="PEGA-AQUI-TU-LINK-DE-CHECKOUT" data-cta="hero">Quiero mi menú de Navidad<small>Acceso inmediato por US$ 7,90</small></a>
+      <div class="chips"><span>🌾 Sin gluten</span><span>🍯 Sin azúcar añadida</span><span>📱 Celular, tablet o PC</span><span>🛡️ Garantía de 7 días</span><span>🎁 + 4 bonos</span></div>
+    </div>
+    <img class="hero-img" src="img/pack-hero.webp" width="1400" height="933" alt="Recetario Cocina Libre: Navidad con panettone y sus 4 bonos: plan de cocina, lista de compras, regalos comestibles y brindis sin azúcar">
+  </div>
+</header>
+
+<!-- 2. DOLOR -->
+<section class="alt">
+  <div class="wrap">
+    <h2 class="centro">¿Te pasa esto cada 24 de diciembre?</h2>
+    <ul class="dolor">
+      <li>Alguien en tu familia no puede comer gluten o azúcar y termina picando de lado mientras todos disfrutan.</li>
+      <li>Terminas cocinando dos cenas: la de todos y la "especial".</li>
+      <li>Te da miedo que el pan dulce o el panettone sin gluten salga seco y duro.</li>
+      <li>Llegas a Nochebuena agotada, sin saber qué preparar ni cuándo.</li>
+    </ul>
+    <p class="cierre-dolor">No es falta de ganas: te faltaba un solo menú, completo y ordenado, que toda la mesa pueda comer.</p>
+  </div>
+</section>
+
+<!-- 3. TODO LO QUE VAS A COCINAR -->
+<section>
+  <div class="wrap">
+    <h2 class="centro">Todo lo que vas a poder cocinar</h2>
+    <p class="sub centro">32 recetas explicadas paso a paso, en 70 páginas, con cantidades exactas e ingredientes que se consiguen en tu país.</p>
+    <div class="tiles">
+      <div class="tile estrella"><img src="img/panettone-pasas.webp" width="1200" height="800" loading="lazy" alt="Panettone sin gluten y sin azúcar con pasas y almendras"><b>Panettone sin gluten y sin azúcar</b></div>
+      <div class="tile"><img src="img/pernil-plato.webp" width="1200" height="800" loading="lazy" alt="Pernil dorado con arroz y ensalada"><b>Menú clásico: pernil dorado</b></div>
+      <div class="tile"><img src="img/menu-sin-horno.webp" width="1200" height="800" loading="lazy" alt="Menú sin horno con olla a presión y sartén"><b>Menú sin horno</b></div>
+      <div class="tile"><img src="img/mesa-nochebuena.webp" width="1200" height="800" loading="lazy" alt="Mesa de Nochebuena completa"><b>Menú para mesa grande</b></div>
+      <div class="tile"><img src="img/entradas-tabla.webp" width="1200" height="800" loading="lazy" alt="Entradas navideñas: rollitos, tomates rellenos, dip de palta y tabla de quesos"><b>4 entradas para empezar</b></div>
+      <div class="tile"><img src="img/postre-budin.webp" width="1200" height="800" loading="lazy" alt="Budín de frutos rojos y nueces sin azúcar"><b>6 postres sin azúcar añadida</b></div>
+    </div>
+    <p class="ilus centro">Imágenes ilustrativas de los platos.</p>
+  </div>
+</section>
+
+<!-- 4. TRES MENÚS -->
+<section class="alt">
+  <div class="wrap">
+    <h2 class="centro">3 menús completos para elegir</h2>
+    <p class="sub centro">Cada menú trae las cantidades para 6, 10 o 15 personas, la lista de compras y el plan de qué hacer el 22, el 23 y el 24.</p>
+    <div class="menus">
+      <div class="menu">
+        <img class="foto" src="img/pernil-plato.webp" width="1200" height="800" loading="lazy" alt="Pernil dorado con arroz y ensalada">
+        <div><h3>Menú clásico</h3>
+          <ul><li>Pernil dorado</li><li>Arroz con verduras</li><li>Ensalada fresca</li><li>Salsa de la casa</li></ul>
+          <p class="para">Para 6, 10 o 15 personas</p></div>
+      </div>
+      <div class="menu">
+        <img class="foto" src="img/menu-sin-horno.webp" width="1200" height="800" loading="lazy" alt="Menú sin horno con olla a presión y sartén">
+        <div><h3>Menú sin horno</h3>
+          <ul><li>Carne en olla a presión, dorada en sartén</li><li>Puré cremoso y verduras salteadas</li><li>Ensalada de hojas, manzana y nueces</li></ul>
+          <p class="para">Ideal si no tienes horno</p></div>
+      </div>
+      <div class="menu">
+        <img class="foto" src="img/mesa-nochebuena.webp" width="1200" height="800" loading="lazy" alt="Mesa de Nochebuena completa para muchas personas">
+        <div><h3>Menú para mesa grande</h3>
+          <ul><li>Ave dorada con relleno sin pan</li><li>Papas al horno con romero</li><li>Quinoa festiva</li><li>Ensalada verde con naranja y granada</li></ul>
+          <p class="para">Pensado para 15 personas</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. LO QUE RECIBES HOY (con todos los bonos) -->
+<section>
+  <div class="wrap">
+    <h2 class="centro">Lo que recibes hoy</h2>
+    <p class="sub centro">Un recetario principal y 4 bonos que hacen que Navidad sea más fácil.</p>
+    <div class="stack">
+      <div class="item principal">
+        <img src="img/libro-final.webp" width="800" height="1120" loading="lazy" alt="Portada del recetario Cocina Libre: Navidad">
+        <div><span class="et">Principal</span><h3>Recetario Cocina Libre: Navidad</h3>
+          <p>32 recetas sin gluten y sin azúcar añadida en 70 páginas: panettone, 3 menús completos con cantidades para 6, 10 y 15 personas, 4 entradas, platos por país y 6 postres. Con lista de compras y plan del 22, 23 y 24 en cada menú.</p></div>
+      </div>
+      <div class="item">
+        <img src="img/bono1-plan.webp" width="700" height="1050" loading="lazy" alt="Bono 1: Plan de cocina del 20 al 24">
+        <div><span class="et">Bono 1</span><h3>Plan de cocina del 20 al 24</h3>
+          <p>Qué preparar cada día para no hacerlo todo en la última hora.</p></div>
+      </div>
+      <div class="item">
+        <img src="img/bono2-lista.webp" width="700" height="1050" loading="lazy" alt="Bono 2: Lista de compras para 8 y 12 personas">
+        <div><span class="et">Bono 2</span><h3>Lista de compras imprimible</h3>
+          <p>Versiones para 8 y para 12 personas. Llevas todo al supermercado en una sola vuelta.</p></div>
+      </div>
+      <div class="item">
+        <img src="img/bono3-regalos.webp" width="700" height="1244" loading="lazy" alt="Bono 3: Regalos comestibles sin azúcar">
+        <div><span class="et">Bono 3</span><h3>Regalos comestibles sin azúcar</h3>
+          <p>Ideas simples para regalar algo hecho por ti, sin azúcar añadida.</p></div>
+      </div>
+      <div class="item">
+        <img src="img/bono4-brindis.webp" width="700" height="933" loading="lazy" alt="Bono 4: Brindis sin azúcar, bebidas y mocktails">
+        <div><span class="et">Bono 4</span><h3>Brindis sin azúcar</h3>
+          <p>Bebidas y mocktails para celebrar sin alcohol ni azúcar añadida.</p></div>
+      </div>
+    </div>
+    <p class="centro" style="margin-top:28px"><a class="btn" href="PEGA-AQUI-TU-LINK-DE-CHECKOUT" data-cta="stack">Sí, quiero todo esto<small>Recetario + 4 bonos por US$ 7,90</small></a></p>
+  </div>
+</section>
+
+<!-- 6. POR DENTRO -->
+<section class="alt">
+  <div class="wrap adentro">
+    <img class="foto" src="img/mockup-celular.webp" width="1200" height="800" loading="lazy" alt="Receta de panettone sin gluten y sin azúcar abierta en un celular">
+    <div>
+      <h2>Así se ve por dentro</h2>
+      <ul class="checks">
+        <li>Ingredientes a la izquierda y paso a paso a la derecha.</li>
+        <li>Cantidades claras, sin adivinar.</li>
+        <li>Lo lees en el celular o lo imprimes y lo llevas a la cocina.</li>
+        <li>Letra grande y fácil de leer.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 7. PAÍSES -->
+<section>
+  <div class="wrap centro">
+    <h2>Sabores de tu país, a tu manera</h2>
+    <div class="paises">
+      <div class="card"><b>Argentina</b>Vitel toné</div>
+      <div class="card"><b>México</b>Tamales de pollo, bacalao navideño, ensalada de Nochebuena</div>
+      <div class="card"><b>Colombia</b>Pernil colombiano, ensalada de pollo</div>
+      <div class="card"><b>Chile</b>Pavo en salsa de verduras, ensalada chilena</div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. ¿ES PARA TI? -->
+<section class="alt">
+  <div class="wrap">
+    <h2 class="centro">¿Es para ti?</h2>
+    <div class="sino">
+      <div class="si"><h3>Sí, si…</h3><ul>
+        <li>Tienes a alguien en tu mesa que no come gluten o azúcar.</li>
+        <li>Quieres una sola cena para todos, sin cocinar doble.</li>
+        <li>Quieres saber qué cocinar y cuándo, sin improvisar.</li>
+        <li>Te gusta cocinar para las fiestas y extrañas el pan dulce y los postres.</li></ul></div>
+      <div class="no"><h3>No, si…</h3><ul>
+        <li>Buscas una dieta milagrosa o resultados sin cocinar.</li>
+        <li>Necesitas un plan médico o nutricional personalizado.</li>
+        <li>Prefieres un libro impreso en papel.</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. PRECIO + GARANTÍA -->
+<section class="verde">
+  <div class="wrap precio">
+    <h2>Empieza hoy mismo</h2>
+    <img class="banner-img" src="img/pack-banner.webp" width="1400" height="933" loading="lazy" alt="Pack completo digital: recetario principal, plan de cocina, lista de compras, regalos comestibles y brindis sin azúcar">
+    <div class="monto">US$ 7,90</div>
+    <p>Pago único · Descarga inmediata</p>
+    <ul class="lista">
+      <li>Recetario principal: 32 recetas, 70 páginas</li>
+      <li>Bono 1: Plan de cocina del 20 al 24</li>
+      <li>Bono 2: Lista de compras para 8 y 12 personas</li>
+      <li>Bono 3: Regalos comestibles sin azúcar</li>
+      <li>Bono 4: Brindis sin azúcar</li>
+    </ul><br>
+    <a class="btn" href="PEGA-AQUI-TU-LINK-DE-CHECKOUT" data-cta="precio">Quiero mi menú de Navidad ahora<small>Descarga inmediata</small></a>
+    <p class="pago">🔒 Pago seguro procesado por Hotmart · Tarjeta y otros medios según tu país. Se cobra en la moneda de tu país.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="garantia">
+      <div class="sello">7 DÍAS DE GARANTÍA</div>
+      <div><h3>Pruébalo sin riesgo</h3>
+      <p>Tienes 7 días para revisar el recetario. Si no es lo que esperabas, pides el reembolso desde Hotmart y te devuelven tu dinero.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. PREGUNTAS -->
+<section class="alt">
+  <div class="wrap">
+    <h2 class="centro">Preguntas frecuentes</h2>
+    <details><summary>¿Cómo recibo el recetario?</summary><p>Apenas se confirma el pago, recibes un correo con el acceso para descargar el libro y los 4 bonos.</p></details>
+    <details><summary>¿Es un libro físico?</summary><p>No. Es un PDF digital que puedes leer en el celular, tablet o computadora, o imprimir.</p></details>
+    <details><summary>¿Sirve si no soy celíaca?</summary><p>Sí. Las recetas son para toda la mesa. Están hechas para que quien no tiene restricciones también las disfrute.</p></details>
+    <details><summary>¿Las recetas usan azúcar?</summary><p>No llevan azúcar añadida. Usan endulzantes de fácil acceso y cada receta lo indica. Las frutas y las pasas aportan su azúcar natural.</p></details>
+    <details><summary>Soy celíaca, ¿qué tengo que revisar?</summary><p>Revisa siempre que los ingredientes envasados indiquen "sin gluten" en tu país. Este recetario no reemplaza la indicación de tu médico o nutricionista.</p></details>
+    <details><summary>¿Los ingredientes son difíciles de conseguir?</summary><p>No. Usamos ingredientes de supermercados de toda Latinoamérica y, cuando hace falta, damos opciones.</p></details>
+    <details><summary>¿Es un pago mensual?</summary><p>No. Pagas una sola vez.</p></details>
+    <details><summary>¿Y si no me gusta?</summary><p>Tienes 7 días de garantía. Pides el reembolso desde Hotmart y te devuelven el pago.</p></details>
+  </div>
+</section>
+
+<!-- 11. CIERRE -->
+<section class="verde">
+  <div class="wrap centro">
+    <h2>Que este año todos brinden con lo mismo en la mesa</h2>
+    <a class="btn" href="PEGA-AQUI-TU-LINK-DE-CHECKOUT" data-cta="cierre">Quiero cocinar sin gluten y sin azúcar<small>US$ 7,90 · Pago único</small></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Cocina Libre · SER ENERGIA UNIVERSAL LTDA</p>
+    <p><a href="privacidad.html">Política de privacidad</a></p>
+    <p style="margin-top:8px">Este producto es un recetario de cocina y no reemplaza la indicación de un profesional de la salud. Los resultados dependen de cada persona.</p>
+    <p style="margin-top:6px">Este sitio no forma parte de Facebook ni de Meta Platforms, Inc.</p>
+  </div>
+</footer>
+
+<div class="barra"><a class="btn" href="PEGA-AQUI-TU-LINK-DE-CHECKOUT" data-cta="barra">Quiero mi menú · US$ 7,90</a></div>
+
+<!-- Píxel de Meta: lo carga cookie-consent.js solo si la persona acepta. El ID se pega allí en el deploy, no antes. -->
+<script src="cookie-consent.js" defer></script>
+</body>
+</html>
